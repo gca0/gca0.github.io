@@ -3,7 +3,7 @@ body {
     padding: 0;
     text-align: left;
     min-height: 100vh;
-    background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(199, 10, 114));
+    background-color: black; /* Changed background to black */
     overflow: hidden;
 }
 

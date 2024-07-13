@@ -66,6 +66,29 @@ p {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.blob {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5); /* Initial color */
+    border-radius: 50%;
+    mix-blend-mode: overlay;
+    pointer-events: none; /* Ensures it doesn't interfere with mouse events */
+    z-index: 9999; /* Ensure it's on top */
+    animation: blobGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes blobGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
 .button:hover {
     background-color: white;
     color: black;

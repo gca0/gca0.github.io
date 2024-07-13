@@ -1,15 +1,8 @@
 document.addEventListener('mousemove', (event) => {
+    const blob = document.querySelector('.blob');
     const mouseX = event.pageX;
     const mouseY = event.pageY;
-    
-    const light = document.createElement('div');
-    light.className = 'light';
-    light.style.left = mouseX + 'px';
-    light.style.top = mouseY + 'px';
-    
-    document.body.appendChild(light);
-    
-    setTimeout(() => {
-        light.remove();
-    }, 2000); // Remove the light element after 2 seconds
+
+    blob.style.left = mouseX + 'px';
+    blob.style.top = mouseY + 'px';
 });

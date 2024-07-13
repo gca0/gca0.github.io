@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Your Name - Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Include your CSS styles from the Streamlit example here */
+        /* This is to ensure all styles are in one place */
+        /* Alternatively, link your CSS file here */
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            min-height: 100vh;
+            background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(199, 10, 114));
+            overflow: hidden;
+        }
+
+        /* Add other CSS styles as per your requirements */
+    </style>
 </head>
 <body>
+    <section id="up"></section>
+    <section id="down"></section>
+    <section id="left"></section>
+    <section id="right"></section>
+
     <div class="container">
-        <h1 style='color: white; opacity: 0; animation: fadeIn 5s ease forwards, floating 2s ease infinite;'>"
-            "<span style='font-weight:bold; font-family: serif; font-size: 70px;'>hi, i'm guanyi cao.</span>"
-            "</h1>
-        <div class="buttons">
-            <a href="about-me.html" class="button">About Me</a>
-            <a href="my-experience.html" class="button">My Experience</a>
-            <a href="projects.html" class="button">Projects</a>
-            <a href="fun-facts.html" class="button">Fun Facts</a>
-        </div>
-        <footer>
-            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
-            <a href="https://github.com/your-github-profile" target="_blank">GitHub</a>
-            <!-- Add more social links if needed -->
-        </footer>
+        <h1>Welcome to <span class="highlight">Your Name</span></h1>
+        <p>We are always trying to discover new ideas and build great things.</p>
+        <a href="about-me.html" class="button">About Me</a>
+        <a href="experience.html" class="button">My Experience</a>
+        <a href="projects.html" class="button">Projects</a>
+        <a href="fun-facts.html" class="button">Fun Facts</a>
     </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/your-github-profile" target="_blank">GitHub</a>
+        <!-- Add more social links if needed -->
+    </footer>
 </body>
 </html>
-

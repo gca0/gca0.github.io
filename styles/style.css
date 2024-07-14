@@ -144,10 +144,6 @@ html, body {
     align-items: center;
   }
 
-header {
-    position: relative;
-}
-
   .text-container {
     z-index: 100;
     width: 100vw;

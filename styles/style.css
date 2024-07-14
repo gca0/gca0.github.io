@@ -140,15 +140,15 @@ header {
     position: relative;
 }
 
-/* .container {
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
     color: white;
-} */
+}
   
-  .text-container {
+  /* .text-container {
     z-index: 100;
     width: 100vw;
     height: 100vh;
@@ -165,7 +165,7 @@ header {
     opacity: 0.8;
     user-select: none;
     text-shadow: 1px 1px rgba(0,0,0,0.1);
-  }
+  } */
   
   :root {
     --color-bg1: rgb(108, 0, 162);

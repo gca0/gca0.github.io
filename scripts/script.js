@@ -1,28 +1,6 @@
-// document.addEventListener('mousemove', (event) => {
-//     const trailContainer = document.getElementById('trail');
-//     const trailDot = document.createElement('div');
-//     trailDot.classList.add('trail-dot');
-    
-//     const color = generateRandomColor(); // Function to generate random color gradient
-//     trailDot.style.backgroundColor = color;
-    
-//     trailDot.style.left = event.pageX + 'px';
-//     trailDot.style.top = event.pageY + 'px';
-    
-//     trailContainer.appendChild(trailDot);
-    
-//     // Remove dot after animation ends
-//     setTimeout(() => {
-//         trailDot.remove();
-//     }, 1000); // Adjust based on the duration of animation
-// });
-
-// function generateRandomColor() {
-//     const hue = Math.floor(Math.random() * 360);
-//     return `hsl(${hue}, 100%, 50%)`;
-// }
 const cursor = document.querySelector(".cursor");
 var timeout;
+var trails = [];
 
 // follow cursor on mouse move
 document.addEventListener("mousemove", (e) => {
@@ -33,17 +11,35 @@ document.addEventListener("mousemove", (e) => {
     cursor.style.left = x + "px";
     cursor.style.display = "block";
 
+    // create trail element
+    const trail = document.createElement("div");
+    trail.className = "trail";
+    trail.style.top = `${y}px`;
+    trail.style.left = `${x}px`;
+    trail.style.backgroundColor = cursor.style.backgroundColor; // inherit cursor color
+    document.body.appendChild(trail);
+    trails.push(trail); // store trail element
+
+    // limit trails to 15 elements
+    if (trails.length > 15) {
+        const removedTrail = trails.shift();
+        removedTrail.parentNode.removeChild(removedTrail);
+    }
+
     // cursor effects on mouse stopped
     function mouseStopped() {
         cursor.style.display = "none";
-
     }
     clearTimeout(timeout);
     timeout = setTimeout(mouseStopped, 1000);
-
-} );
+});
 
 // cursor effects on mouse out
 document.addEventListener("mouseout", () => {
     cursor.style.display = "none";
-})
+});
+
+// clear trails on page refresh
+window.addEventListener("beforeunload", () => {
+    trails.forEach(trail => trail.remove());
+});

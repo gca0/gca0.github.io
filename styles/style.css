@@ -137,6 +137,7 @@ html, body {
   box-sizing: border-box;
   text-align: left;
   min-height: 100vh;
+  background-color: black; 
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -148,11 +149,11 @@ html, body {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-  display: flex; 
-  flex-direction: column;
+  /* display: flex; */
+  /* position: absolute; */
   top: 0;
   left: 0;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
   align-items: center;
   font-size: 96px;

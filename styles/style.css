@@ -147,6 +147,7 @@ html, body {
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 96px;
   color: white;
   opacity: 0.8;
@@ -155,7 +156,8 @@ html, body {
 }
 
 :root {
-  --color-bg1: rgb(108, 0, 162);
+  /* --color-bg1: rgb(108, 0, 162); */
+  --color-bg1: rgb(255, 255, 255);
   --color-bg2: rgb(0, 17, 82);
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;

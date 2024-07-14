@@ -26,31 +26,31 @@
 //     cursor.style.display = "none";
 // })
 
+import './style.css';
+
 document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.querySelector('.cursor');
-    const gradients = document.querySelectorAll('.gradients-container > div');
+    const interBubble = document.querySelector('.interactive');
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
 
-    document.addEventListener('mousemove', (e) => {
-        if (cursor) {
-            cursor.style.left = `${e.clientX}px`;
-            cursor.style.top = `${e.clientY}px`;
-        }
-    });
-
-    document.addEventListener('click', () => {
-        if (cursor) {
-            cursor.classList.add('expand');
-            setTimeout(() => cursor.classList.remove('expand'), 500);
-        }
-    });
-
-    function animateGradients() {
-        gradients.forEach((gradient) => {
-            gradient.classList.add('animate');
+    function move() {
+        curX += (tgX - curX) / 20;
+        curY += (tgY - curY) / 20;
+        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        requestAnimationFrame(() => {
+            move();
         });
     }
 
-    animateGradients();
+    window.addEventListener('mousemove', (event) => {
+        tgX = event.clientX;
+        tgY = event.clientY;
+    });
+
+    move();
 });
+
 
 

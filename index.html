@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,61 @@
     </footer>
     
     
-    <script src="scripts/script.js"></script> <!-- Script link -->
+    <script src="scripts/script.js"></script> 
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>guanyi's site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="cursor"></div>
+    <div class="container">
+      <h1>
+        <span>hi, i'm guanyi. </span>
+      </h1>
+      <p>
+        <strong>welcome to my space. </strong><br>
+      </p>
+      <a href="about-me.html" class="button">About Me</a>
+      <a href="experience.html" class="button">My Experience</a>
+      <a href="projects.html" class="button">Projects</a>
+      <a href="fun-facts.html" class="button">Fun Facts</a>
+    </div>
+  </header>
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+  <footer>
+    <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
+    <a href="https://github.com/your-github-profile" target="_blank">GitHub</a>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>

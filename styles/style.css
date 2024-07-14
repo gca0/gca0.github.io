@@ -137,7 +137,6 @@ html, body {
   box-sizing: border-box;
   text-align: left;
   min-height: 100vh;
-  background-color: black; 
   overflow: hidden;
   display: flex;
   justify-content: center;

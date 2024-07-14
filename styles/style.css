@@ -130,10 +130,12 @@ footer a:hover {
     color: black;
 } */
 
-html, body {
+html,
+body {
   font-family: 'Dongle', sans-serif;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .text-container {
@@ -144,15 +146,18 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0;
+  padding: 0;
   font-size: 96px;
   color: white;
   opacity: 0.8;
   user-select: none;
-  text-shadow: 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(15%);
+
 }
 
 :root {
@@ -173,9 +178,11 @@ html, body {
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -185,9 +192,11 @@ html, body {
   0% {
     transform: translateY(-50%);
   }
+
   50% {
     transform: translateY(50%);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -197,9 +206,11 @@ html, body {
   0% {
     transform: translateX(-50%) translateY(-10%);
   }
+
   50% {
     transform: translateX(50%) translateY(10%);
   }
+
   100% {
     transform: translateX(-50%) translateY(-10%);
   }
@@ -207,7 +218,7 @@ html, body {
 
 .gradient-bg {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
@@ -303,10 +314,10 @@ html, body {
 
 h1 {
   opacity: 0;
-  animation: fadeIn 8s ease forwards, floating 2s ease infinite;
+  animation: fadeIn 8s ease forwards;
   font-weight: normal;
-  font-family: sans-serif;
-  font-size: 50px;
+  padding: 0;
+  margin: 0;
 }
 
 h1 span:nth-child(2) {
@@ -315,24 +326,65 @@ h1 span:nth-child(2) {
   font-size: 70px;
 }
 
+
+#word {
+  visibility: hidden;
+  display:inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+#word.visible {
+  visibility: visible;
+  padding: 0;
+  margin: 0;
+}
+
 p {
   opacity: 0;
-  animation: fadeIn 10s ease forwards;
-  font-size: 20px;
+  animation: fadeIn 10s ease forwards, floating 2s ease infinite;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 @keyframes fadeIn {
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes floating {
-  0%, 100% {
-      transform: translateY(0);
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
+
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.typewriter {
+  opacity: 0;
+  font-weight: normal;
+  animation: fadeIn 10s ease forwards;
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
+  height: 10px;
+}
+
+.blink {
+  animation: blink 0.5s infinite;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes blink {
+  to {
+    opacity: .0;
   }
 }
 
@@ -340,17 +392,21 @@ p {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: transparent;
+  /* background-color: transparent; */
+  border-radius: 30px;
   border: 2px solid white;
   color: white;
+  background-color: #94b8ff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 25px;
   transition: background-color 0.3s, color 0.3s;
+  opacity: 0;
+  animation: fadeIn 10s ease forwards;
 }
 
 .button:hover {
   background-color: white;
-  color: black;
+  color: #94b8ff;
 }
 
 footer {
@@ -358,13 +414,15 @@ footer {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeIn 10s ease forwards;
 }
 
 footer a {
   margin: 0 10px;
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 footer a:hover {

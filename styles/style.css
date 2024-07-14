@@ -1,10 +1,14 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-align: left;
     min-height: 100vh;
     background-color: black; /* Changed background to black */
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -67,36 +71,40 @@ p {
 }
 
 
-#trail {
+.cursor {
+    z-index: 999;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Ensures it doesn't interfere with mouse events */
-    z-index: -1; /* Place it behind other content */
-}
-
-/* Trail effect */
-.trail-dot {
-    position: absolute;
+    background: #2696E8;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5); /* Initial color */
-    mix-blend-mode: overlay;
-    animation: trailGlow 1s linear forwards;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696E8, 
+                0 0 60px, #2696E8, 
+                0 0 100px, #2696E8;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+
 }
 
-@keyframes trailGlow {
+@keyframes colors {
     0% {
-        transform: scale(0);
-        opacity: 1;
+        filter: hue-rotate(0deg);
     }
     100% {
-        transform: scale(1);
-        opacity: 0;
+        filter: hue-rotate(360deg);
     }
+}
+.cursor:before {
+    content: '';
+    position: absolute;
+    background: #2696E8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
 }
 
 .button:hover {

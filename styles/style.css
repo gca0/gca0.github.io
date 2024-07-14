@@ -134,19 +134,20 @@ html, body {
     font-family: 'Dongle', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+    min-height: 100vh;
+    background-color: black; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 header {
     position: relative;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-/*   
   .text-container {
     z-index: 100;
     width: 100vw;
@@ -164,7 +165,7 @@ header {
     opacity: 0.8;
     user-select: none;
     text-shadow: 1px 1px rgba(0,0,0,0.1);
-  } */
+  }
   
   :root {
     --color-bg1: rgb(108, 0, 162);

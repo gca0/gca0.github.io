@@ -94,7 +94,7 @@ p {
     transform: translate(-50%, -50%);
     display: none;
 
-}
+} */
 
 .cursor:before {
     content: '';
@@ -105,7 +105,7 @@ p {
     opacity: 0.2;
     transform: translate(-30%, -30%);
     border-radius: 50%;
-} */
+}
 
 .cursor {
     z-index: 999;
@@ -123,7 +123,7 @@ p {
     display: none;
 }
 
-.cursor:before {
+/* .cursor:before {
     content: '';
     position: absolute;
     width: 100px;
@@ -132,7 +132,7 @@ p {
     background: radial-gradient(circle, rgba(38, 150, 232, 0.8), transparent);
     opacity: 0.4;
     transform: translate(-30%, -30%);
-}
+} */
 
 .button:hover {
     background-color: white;

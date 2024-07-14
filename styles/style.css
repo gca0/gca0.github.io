@@ -110,13 +110,13 @@ p {
 .trail {
     position: fixed;
     background-color: #2696E8; /* Adjust color if needed */
-    width: 20px;
-    height: 20px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     pointer-events: none;
-    opacity: 0.7; /* Adjust opacity as desired */
-    z-index: 998; /* Behind the cursor but above content */
-    transition: transform 0.5s ease-out, opacity 1s ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: background-color 0.15s ease-out;
 }
 
 .trail:before {

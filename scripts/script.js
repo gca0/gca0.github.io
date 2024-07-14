@@ -27,6 +27,7 @@
 // })
 
 import './style.css'
+// whyyy
 
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');

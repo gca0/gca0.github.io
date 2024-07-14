@@ -26,8 +26,7 @@
 //     cursor.style.display = "none";
 // })
 
-import './style.css'
-// whyyy
+import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');

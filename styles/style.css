@@ -402,7 +402,7 @@ p {
   font-size: 25px;
   transition: background-color 0.3s, color 0.3s;
   opacity: 0;
-  animation: fadeIn 10s ease forwards;
+  animation: fadeIn 8s ease forwards;
 }
 
 .button:hover {
@@ -491,10 +491,9 @@ p {
 } */
 
 .socials {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(10%);
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
   opacity: 0;
   animation: fadeIn 10s ease forwards;
 }

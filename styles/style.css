@@ -491,21 +491,16 @@ p {
 } */
 
 .socials {
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px 20px;
   transform: translateY(10%);
+  color: white;
   opacity: 0;
+  font-size: 20px;
   animation: fadeIn 10s ease forwards;
 }
 
-.socials a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.socials a:hover {
+.socials:hover {
   color: #94b8ff;
 }
 

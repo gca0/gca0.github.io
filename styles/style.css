@@ -426,7 +426,7 @@ p {
   height: 20px;
   border-radius: 50%;
   pointer-events: none;
-  box-shadow: 0 0 20px #d1adf5, 
+  box-shadow: 0 0 20px #ffffff, 
               0 0 60px, #d1adf5, 
               0 0 100px, #d1adf5;
   /* animation: colors 5s infinite; */
@@ -437,7 +437,7 @@ p {
 .cursor:before {
   content: '';
   position: absolute;
-  background: #d1adf5;
+  background: #ffffff;
   width: 50px;
   height: 50px;
   opacity: 0.2;

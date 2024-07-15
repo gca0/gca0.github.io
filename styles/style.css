@@ -494,7 +494,7 @@ p {
   position: fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(10%);
   opacity: 0;
   animation: fadeIn 10s ease forwards;
 }

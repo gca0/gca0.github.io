@@ -490,8 +490,27 @@ p {
   content: '';
 } */
 
+.socials {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeIn 10s ease forwards;
+}
 
-footer {
+.socials a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.socials a:hover {
+  color: #94b8ff;
+}
+
+/* footer {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -509,7 +528,7 @@ footer a {
 
 footer a:hover {
   color: black;
-}
+} */
 
 
   

@@ -336,7 +336,7 @@ h1 span:nth-child(2) {
 
 #word.visible {
   visibility: visible;
-  padding: 5%;
+  padding: 55px;
   margin: 0;
 }
 

@@ -219,7 +219,12 @@ h1 span:nth-child(2) {
 .intro-text {
   font-size: 25px;
   margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 10px;
+  background: transparent;
+  transform: translateY(-30px);
 }
 
 @keyframes fadeIn {

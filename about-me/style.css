@@ -217,9 +217,8 @@ h1 span:nth-child(2) {
 }
 
 .intro-text {
-  font-size: 20px;
-  padding: 2%;
-  margin: 10px;
+  font-size: 25px;
+  margin: 30px;
   justify-content: center;
 }
 

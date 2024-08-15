@@ -17,7 +17,7 @@ function heightTransform() {
 }
 
 function resetTransform() {
-  textContainer.style.transform = "scale(1.2)";
+  textContainer.style.transform = "scale(1)";
   textContainer.style.transformOrigin = "initial";
   textContainer.style.width = "100%";
   textContainer.style.height = "auto";
@@ -29,14 +29,14 @@ function checkDimensions() {
   const firstChild = textContainer.firstElementChild;
   const introContainer = document.querySelector('.intro-container');
   
-  if (innerWidth < 500) {
+  if (innerWidth <= 500) {
     textContainer.style.marginTop = "0";
+    transform34();
     if (firstChild) {
       textContainer.insertBefore(profilePic, firstChild.nextSibling);
-      transform34();
     }
   } 
-  else if (innerWidth > 500 && innerWidth < 1000 && innerHeight < 1024) {
+  else if (innerWidth > 500 && innerWidth < 1000 && innerHeight < 1050) {
     textContainer.style.marginTop = "-80px";
     heightTransform();
     introContainer.insertBefore(profilePic, introContainer.firstChild);

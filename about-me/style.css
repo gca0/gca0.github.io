@@ -184,7 +184,7 @@ body {
 
 h1 {
   opacity: 0;
-  animation: fadeIn 8s ease forwards;
+  animation: fadeIn 5s ease forwards;
   font-weight: normal;
   padding: 0;
   margin: 0;
@@ -211,7 +211,7 @@ h1 span:nth-child(2) {
 
 .hover-text {
   opacity: 0;
-  animation: fadeIn 10s ease forwards, floating 2s ease infinite;
+  animation: fadeIn 8s ease forwards, floating 2s ease infinite;
   font-size: 40px;
   text-align: center;
   padding: 2%;
@@ -235,7 +235,7 @@ h1 span:nth-child(2) {
   background: transparent;
   width: 550px;
   transform: translateY(40px);
-  animation: fadeIn 8s ease forwards;
+  animation: fadeIn 5s ease forwards;
   opacity: 0;
 }
 
@@ -248,7 +248,7 @@ h1 span:nth-child(2) {
   object-fit: cover; 
   border: 2px solid #94b8ff; 
   transform: translateY(40px);
-  animation: fadeIn 8s ease forwards;
+  animation: fadeIn 3s ease forwards;
 }
 
 
@@ -273,7 +273,7 @@ h1 span:nth-child(2) {
 .typewriter {
   opacity: 0;
   font-weight: normal;
-  animation: fadeIn 10s ease forwards;
+  animation: fadeIn 8s ease forwards;
   font-size: 60px;
   width: 500px;
   padding: 0px;
@@ -335,7 +335,7 @@ h1 span:nth-child(2) {
   font-size: 25px;
   transition: background-color 0.3s, color 0.3s;
   opacity: 0;
-  animation: fadeIn 8s ease forwards;
+  animation: fadeIn 5s ease forwards;
 }
 
 .button:hover {
@@ -363,7 +363,7 @@ h1 span:nth-child(2) {
   color: white;
   opacity: 0;
   font-size: 20px;
-  animation: fadeIn 10s ease forwards;
+  animation: fadeIn 8s ease forwards;
 }
 
 .socials:hover {

@@ -17,7 +17,7 @@ function heightTransform() {
 }
 
 function resetTransform() {
-  textContainer.style.transform = "scale(1)";
+  textContainer.style.transform = "scale(1.2)";
   textContainer.style.transformOrigin = "initial";
   textContainer.style.width = "100%";
   textContainer.style.height = "auto";
@@ -27,6 +27,7 @@ function resetTransform() {
 function checkDimensions() {
   const innerWidth = window.innerWidth;
   const firstChild = textContainer.firstElementChild;
+  const introContainer = document.querySelector('.intro-container');
   
   if (innerWidth < 500) {
     textContainer.style.marginTop = "0";
@@ -35,11 +36,22 @@ function checkDimensions() {
       transform34();
     }
   } 
-  else {
+  else if (innerWidth > 500 && innerWidth < 1000 && innerHeight < 1024) {
     textContainer.style.marginTop = "-80px";
     heightTransform();
-    const introContainer = document.querySelector('.intro-container');
     introContainer.insertBefore(profilePic, introContainer.firstChild);
+  }
+  else {
+    textContainer.style.marginTop = "50px";
+    resetTransform();
+    if (innerHeight >= 1024) {
+        if (firstChild) {
+            textContainer.insertBefore(profilePic, firstChild.nextSibling);
+        }
+    }
+    else {
+        introContainer.insertBefore(profilePic, introContainer.firstChild);
+    }
   }
 
 }

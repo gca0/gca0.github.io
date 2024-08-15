@@ -41,4 +41,8 @@ function checkWidth() {
   }
 }
 
+// Call checkWidth() when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', checkWidth);
+
+// Also call checkWidth() when the window is resized
 window.addEventListener('resize', checkWidth);

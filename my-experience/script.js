@@ -27,51 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     move();
 });
 
-// typewriter effect
-
-const words = ['hi, it\'s nice to meet you!', 'hi, it\'s nice to meet you!'];
-let i = 0;
-let timer;
-
-function typingEffect() {
-    let word = words[i].split("");
-    document.getElementById('word').classList.add('visible'); // Make text visible when typing starts
-    var loopTyping = function() {
-        if (word.length > 0) {
-            document.getElementById('word').innerHTML += word.shift();
-        } else {
-            // Wait for 5 seconds before starting to delete
-            setTimeout(deletingEffect, 5000);
-            return false;
-        }
-        timer = setTimeout(loopTyping, 200);
-    };
-    loopTyping();
-}
-
-function deletingEffect() {
-    let word = words[i].split("");
-    var loopDeleting = function() {
-        if (word.length > 0) {
-            word.pop();
-            document.getElementById('word').innerHTML = word.join("");
-        } else {
-            document.getElementById('word').classList.remove('visible'); // Hide text when it is fully deleted
-            if (words.length > (i + 1)) {
-                i++;
-            } else {
-                i = 0;
-            }
-            typingEffect();
-            return false;
-        }
-        timer = setTimeout(loopDeleting, 200);
-    };
-    loopDeleting();
-}
-
-typingEffect();
-
 // cursor effects
 const cursor = document.querySelector(".cursor");
 
@@ -87,4 +42,18 @@ document.addEventListener("mousemove", (e) => {
 // cursor effects on mouse out
 document.addEventListener("mouseout", () => {
     cursor.style.display = "none";
+});
+
+
+let myLabels = document.querySelectorAll('.lbl-toggle');
+
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
 });

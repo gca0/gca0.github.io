@@ -346,7 +346,7 @@ li {
 }
 
 .panel.open .panel-content {
-    max-height: 1000px;
+    max-height: 100000px;
     padding: 15px;
 }
 
@@ -382,6 +382,74 @@ li {
     background-position: 0 100%;
     border-radius: 30px;
 }
+
+/*taken from https://www.digitalocean.com/community/tutorials/css-collapsible*/
+  .wrap-collabsible {
+    margin-bottom: 1.2rem 0;
+  }
+  
+  input[type='checkbox'] {
+    display: none;
+  }
+  
+  .lbl-toggle {
+    display: block;
+  
+    /* font-weight: bold;
+    font-family: monospace; */
+    /* text-transform: uppercase; */
+    text-align: left;
+  
+    padding: 1rem;
+  
+    /* color: #A77B0E; */
+    background: #ffffff5c;
+  
+    cursor: pointer;
+  
+    border-radius: 30px;
+    transition: all 0.25s ease-out;
+    margin-bottom: 10px;
+  }
+  
+  .lbl-toggle:hover {
+    text-decoration: underline;
+  }
+  
+  .lbl-toggle::before {
+    content: '\002B';
+    display: inline-block;
+    margin-right: .7rem;
+  }
+  
+  .toggle:checked + .lbl-toggle::before {
+    content: "\2212";
+    margin-bottom: 0px;
+  }
+  
+  .collapsible-content {
+    font-size: 23px;
+    text-align: left;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+    overflow-y: visible;
+  }
+  
+  .toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+  }
+  
+  
+  .collapsible-content .content-inner {
+    /* background: rgba(129, 159, 183, 0.2); */
+    background: #ffffff2f;
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 10px;
+  }
+
+
 
 
 @media (max-width: 500px) {

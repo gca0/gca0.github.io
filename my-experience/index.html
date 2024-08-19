@@ -28,7 +28,90 @@
                 <div class="panel-content">
                     <em style="font-size: larger;">june 2024 - august 2024</em>
                     <p class="exp-description">
-                        
+                        Thoughout the summer, I and a co-intern worked on one project: building a validation application. <br>
+                        As engineers on the Wholesale Lending team, we worked closely with ensuring that lending operations at Barclays Bank were 
+                        processed accurately and efficiently. At the time of my internship, a primary focus for the team was replacing the existing system
+                        that supported loan booking and servicing with a new commercial lending system.
+                        <br>
+                        <ul style="text-align: left; font-size: 23px;">
+                          <li>
+                              <em>Problem</em>: Due to the migration process, the accurate migration of data from one platform to another becomes very important. 
+                              During the process, interfaces within the system are constantly changing — thus requiring a need to ensure consistency and proper maintenance 
+                              of information. 
+                          </li>
+                          <br>
+                          <li>
+                              <em>Solution</em>: To address the problem, we developed an application that validated the generated output (API response) of two important interfaces 
+                              by comparing it to previously stored output in the MongoDB database, as part of the regression testing process.
+                           </li>
+                           <br>
+                           <li>
+                              <em>Process</em>: 
+
+                              <input id="collapsible0" class="toggle" type="checkbox">
+                              <label for="collapsible0" class="lbl-toggle" tabindex="0">
+                                  Research</label>
+                              <div class="collapsible-content">
+                                <div class="content-inner">
+                                  I read up on a lot of documentation, sifting through the existing codebase and understanding the workflow of the interfaces and microservices I was working with. After drafting up a diagram and design doc
+                                  with our workflow, we began developing the application.
+                                </div>
+                              </div>
+
+                              <input id="collapsible1" class="toggle" type="checkbox">
+                              <label for="collapsible1" class="lbl-toggle" tabindex="0">
+                                  Development</label>
+                              <div class="collapsible-content">
+                                <div class="content-inner">
+                                  I met often with my manager and the owners of the interfaces/microservices, updating them on progress, getting assistance on troubleshooting, and brainstorming ideas for implementation at each step. 
+                                  <br>
+                                  <br>
+                                  The application was developed in Java Spring Boot, with the integration of Kafka services to send API requests of existing records, and retrieve newly generated API responses. 
+                                  <br>
+                                  We implemented multiple comparators to account for the comparison
+                                  of different API response formats, and integrated an emailing function that would send a detailed report of all test cases run in a particular session to the relevant testing team. 
+                                  <br>
+                                  Due to running into many server failures
+                                  throughout our development process, an start-up check was also implemented to ensure everything was up and running.
+                                  <br>
+                                  <br>
+                                  The application was deployed on a server accessible to anyone on the team, and was to be extended to more interfaces and ultimately integrated into the CI/CD pipeline.
+                                </div>
+                              </div>
+                           <br>
+                           <li>
+                              <em>Result</em>: 
+
+                              <input id="collapsible2" class="toggle" type="checkbox">
+                              <label for="collapsible2" class="lbl-toggle" tabindex="0">
+                                  Scalability</label>
+                              <div class="collapsible-content">
+                                <div class="content-inner">
+                                  Previously, all outputs were inspected manually. Whoever was verifying would've needed to send the record
+                                  manually, retrieve the API response, and compare it to the new response by manually looking up the record in the database. 
+                                  <br>
+                                  Needless to say, this would be very time consuming to do for each record. The application provides scalability, enabling large volumes
+                                  of records to be verified at once, and automates the testing process, completely eliminating the need for manual testing.
+                                </div>
+                              </div>
+
+                              <input id="collapsible3" class="toggle" type="checkbox">
+                              <label for="collapsible3" class="lbl-toggle" tabindex="0">
+                                  Protection of Reputational Risk</label>
+                              <div class="collapsible-content">
+                                <div class="content-inner">
+                                  By catching any inconsistencies or errors, the validation application can cover the firm's reputational risk by ensuring that correct
+                                  information is being sent out to clients and prevent any inaccurate transfers of funds, which involves large sums of money — up to billions of
+                                  dollars. By automating an important testing process, we were able to help the team avoid running the risk of falsifying information and breaching regulatory
+                                  requirements, preserving Barclays' reputation and avoiding heavy penalties.
+                                </div>
+                              </div>
+
+
+                           </li>
+                      </ul>
+
+            
 
 
                     </p>
@@ -52,8 +135,8 @@
 
 
                     <div class="wrap-collabsible">
-                        <input id="collapsible" class="toggle" type="checkbox">
-                        <label for="collapsible" class="lbl-toggle" tabindex="0">
+                        <input id="collapsible4" class="toggle" type="checkbox">
+                        <label for="collapsible4" class="lbl-toggle" tabindex="0">
                             Reducing lead sourcing time</label>
                         <div class="collapsible-content">
                           <div class="content-inner">
@@ -92,8 +175,8 @@
 
 
 
-                        <input id="collapsible2" class="toggle" type="checkbox">
-                        <label for="collapsible2" class="lbl-toggle" tabindex="0">
+                        <input id="collapsible5" class="toggle" type="checkbox">
+                        <label for="collapsible5" class="lbl-toggle" tabindex="0">
                             Competitive analysis of sales and onboarding flows</label>
                         <div class="collapsible-content">
                           <div class="content-inner">
@@ -132,8 +215,8 @@
 
 
 
-                        <input id="collapsible3" class="toggle" type="checkbox">
-                        <label for="collapsible3" class="lbl-toggle" tabindex="0">
+                        <input id="collapsible6" class="toggle" type="checkbox">
+                        <label for="collapsible6" class="lbl-toggle" tabindex="0">
                             Creating prototype of "top-of-funnel" marketing content</label>
                         <div class="collapsible-content">
                           <div class="content-inner">
@@ -195,7 +278,23 @@
                     undergraduate course assistant @ princeton cs</div>
                 <div class="panel-content">
                     <em style="font-size: larger;">feb 2022 - present</em>
+                    <p class="exp-description">
+                      As an undergraduate course assistant for the Intro to Java Programming and Data Structures and Algorithms courses, my primary responsibility was in grading programming assignments each week. Based on a given rubric and my own observations, I would evaluate assignments on criteria such as efficiency, code design, and readability.
+                      <br>
+                      <br>
+                      Initially, my motivation for applying to the role was to give back to the staff, who have been very helpful while I was taking the course, and provided a positive transition into a CS education in college from high school.
+                      But as I began taking on work, I realized the role really helped me build upon my analytical skills, communication skills, and also problem-solving.
+                      <br>
+                      <br>
+                      I learned to scan code with a more critical eye, paying attention to things such as unnecessary lines, repeated code blocks, lack of variables to store results (calling functions over and over), and doing this often with many assignments have since instilled in me a subconsciousness to avoid similar mistakes with my own programming work.
+                      <br>
+                      <br>
+                      In some cases, I received feedback from students who disputed my grading; it is definitely refreshing to be challenged and to think further about the reasoning behind my grading, as well as the students’ justification for why points shouldn’t have been deducted. I appreciate students who believe in their ideas and advocate for them, rather than just accepting the score.
+                      <br>
+                      <br>
+                      The rubric that we are given weekly also teaches me new concepts in its reasoning behind why certain errors/code choices might raise issues, and every time I come upon a concept that I might not have known, I’m reminded that although I’ve moved on from the class, there are still many areas where my knowledge is still fairly superficial.
 
+                    </p>
 
                 </div>
             </div>

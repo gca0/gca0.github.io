@@ -1,10 +1,4 @@
-document.querySelectorAll('.panel-header').forEach(header => {
-    header.addEventListener('click', function() {
-        const panel = this.parentElement;
-        panel.classList.toggle('open');
-    });
-});
-
+// gradient background
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');
     let curX = 0;
@@ -44,21 +38,7 @@ document.addEventListener("mouseout", () => {
     cursor.style.display = "none";
 });
 
-
-let myLabels = document.querySelectorAll('.lbl-toggle');
-
-Array.from(myLabels).forEach(label => {
-  label.addEventListener('keydown', e => {
-    // 32 === spacebar
-    // 13 === enter
-    if (e.which === 32 || e.which === 13) {
-      e.preventDefault();
-      label.click();
-    };
-  });
-});
-
-
+// animated text appears upon becoming visible on page
 document.addEventListener("DOMContentLoaded", function() {
     const moodmixText = document.querySelector('.moodmix-text');
     const gojobotText = document.querySelector('.gojobot-text');
